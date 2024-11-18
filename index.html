@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Taha Benarous</h1>
+        <form id="serviceForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="serviceType">Service Type:</label>
+            <input type="text" id="serviceType" required><br>
+
+            <label for="source">Source:</label>
+            <input type="text" id="source" required><br>
+
+            <label for="priceDinar">Price in Dinars:</label>
+            <input type="number" id="priceDinar" required><br>
+
+            <label for="priceDollar">Price in Dollars:</label>
+            <input type="number" id="priceDollar" required><br>
+
+            <label for="startTime">Start Time:</label>
+            <input type="datetime-local" id="startTime" required><br>
+
+            <label for="endTime">End Time:</label>
+            <input type="datetime-local" id="endTime"><br>
+
+            <label for="paymentStatus">Payment Status:</label>
+            <select id="paymentStatus" required>
+                <option value="paid">Yes</option>
+                <option value="unpaid">No</option>
+            </select><br>
+
+            <label for="workLocation">Work Location:</label>
+            <input type="text" id="workLocation" required><br>
+
+            <button type="submit" class="addd">Add Service</button>
+        </form>
+
+        <div class="search">
+            <input type="text" id="search" placeholder="Search by username..." onkeyup="searchService()">
+        </div>
+
+        <table id="serviceTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Service Type</th>
+                    <th>Source</th>
+                    <th>Price in Dinars</th>
+                    <th>Price in Dollars</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Payment Status</th>
+                    <th>Work Location</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
